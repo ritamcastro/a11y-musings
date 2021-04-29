@@ -8,11 +8,16 @@ const InputsAndLabelsForOneField = () => {
 
     return (
         <div>
+            
             <div>
                 <h4>Good and Accessible Pokemons!</h4>
                 <Good showPokemon={setPokemon} />
                 <If condition={pokemon}>
-                    <p>I choose you, {pokemon}! </p>
+                    {
+                        pokemon.map(p =>
+                            <p>I choose you, {p}! </p>
+                        )
+                    }
                 </If>
             </div>
 
@@ -21,7 +26,11 @@ const InputsAndLabelsForOneField = () => {
                 <Bad showPokemon={setPokemon} />
 
                 <If condition={pokemon}>
-                    <p>I choose you, {pokemon}! </p>
+                    {
+                        pokemon.map(p =>
+                            <p>I choose you, {p}! </p>
+                        )
+                    }
                 </If>
             </div>
 
@@ -30,9 +39,14 @@ const InputsAndLabelsForOneField = () => {
                 <h4>Only One Accessible Pokemons!</h4>
                 <Meh showPokemon={setPokemon} />
                 <If condition={pokemon}>
-                    <p>I choose you, {pokemon}! </p>
-                </If>
+                    {
+                        pokemon.map(p =>
+                            <p>I choose you, {p}! </p>
+                        )
+                    }                </If>
             </div>
+
+            {/* // TODO: add label with children */}
         </div>
     )
 }
