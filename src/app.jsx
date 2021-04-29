@@ -1,6 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom"
 import InputsAndLabelsForOneField from "./inputs-and-labels/one-field/one-field"
+import "./app.scss"
+import Header from "./ui/molecules/header/header"
+import Footer from "./ui/molecules/footer/footer"
 
 const Home = () => {
     return (
@@ -14,12 +17,7 @@ const Home = () => {
 
 const App = () => {
     return <BrowserRouter>
-        <header class="page-header">
-            <Link to="/">
-                <img alt="Home" src="assets/images/mandala.png" height="42" width="42" />
-                Home
-            </Link>
-        </header>
+        <Header />
 
         <main>
             <Switch>
@@ -28,9 +26,8 @@ const App = () => {
             </Switch>
         </main>
 
-        <footer>
-            <p>Rita Castro | 2021</p>
-        </footer>
+        <Footer />
+
     </BrowserRouter>
 }
 

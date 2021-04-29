@@ -17,10 +17,11 @@
     "watch": "webpack-dev-server --mode development --devtool source-map --hot --watch"
   },
   "dependencies": {
+    "@fontsource/fira-code": "^4.2.2",
+    "@fontsource/fira-sans": "^4.2.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-router-dom": "5.2.0",
-    "formik": "2.2.6"
+    "react-router-dom": "5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
