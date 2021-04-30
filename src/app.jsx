@@ -4,6 +4,7 @@ import InputsAndLabelsForOneField from "./inputs-and-labels/one-field/one-field"
 import "./app.scss"
 import Header from "./ui/molecules/header/header"
 import Footer from "./ui/molecules/footer/footer"
+import InputArrayMusings from "./ui/pages/input-array/input-array"
 
 const Home = () => {
     return (
@@ -22,6 +23,7 @@ const App = () => {
         <main>
             <Switch>
                 <Route path="/inputs/one-field/" render={() => <InputsAndLabelsForOneField />} />
+                <Route path="/input-array/" render={() => <InputArrayMusings />} />
                 <Route path="/" render={() => <Home />} />
             </Switch>
         </main>

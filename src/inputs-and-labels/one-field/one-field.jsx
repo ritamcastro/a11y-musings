@@ -1,14 +1,14 @@
 import React, { useState } from "react"
 import Bad from "./bad"
 import Good from "./good"
-import Meh from "./meh"
+
 
 const InputsAndLabelsForOneField = () => {
     const [pokemon, setPokemon] = useState(undefined)
 
     return (
         <div>
-            
+
             <div>
                 <h4>Good and Accessible Pokemons!</h4>
                 <Good showPokemon={setPokemon} />
@@ -35,7 +35,7 @@ const InputsAndLabelsForOneField = () => {
             </div>
 
 
-            <div>
+            {/* <div>
                 <h4>Only One Accessible Pokemons!</h4>
                 <Meh showPokemon={setPokemon} />
                 <If condition={pokemon}>
@@ -44,7 +44,7 @@ const InputsAndLabelsForOneField = () => {
                             <p>I choose you, {p}! </p>
                         )
                     }                </If>
-            </div>
+            </div> */}
 
             {/* // TODO: add label with children */}
         </div>
