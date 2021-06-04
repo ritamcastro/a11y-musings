@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./form-with-multiple-inputs.scss"
 
-const UsingForInLabelAndIdInInput = () => {
+const UsingForInLabelAndAriaLabelledByInInput = () => {
 
     const [input, setInput] = useState("")
     const [input2, setInput2] = useState("")
@@ -17,10 +17,10 @@ const UsingForInLabelAndIdInInput = () => {
     return (
         <div className="multiple-inputs">
             <form className="form" onSubmit={onSubmit}>
-                <label htmlFor="mehPokemons">Choose up to three Pokemons:</label>
-                <input id="mehPokemons" placeholder="Bulbasar?" value={input} onChange={e => setInput(e.target.value)} />
-                <input id="mehPokemons" placeholder="Charmander?" value={input2} onChange={e => setInput2(e.target.value)} />
-                <input id="mehPokemons" placeholder="Squirtle?" value={input3} onChange={e => setInput3(e.target.value)} />
+                <label htmlFor="goodPokemons">Choose up to three Pokemons:</label>
+                <input aria-labelledby="goodPokemons" placeholder="Bulbasar?" value={input} onChange={e => setInput(e.target.value)} />
+                <input aria-labelledby="goodPokemons" placeholder="Charmander?" value={input2} onChange={e => setInput2(e.target.value)} />
+                <input aria-labelledby="goodPokemons" placeholder="Squirtle?" value={input3} onChange={e => setInput3(e.target.value)} />
                 <button>GO!</button>
             </form>
 
@@ -37,4 +37,4 @@ const UsingForInLabelAndIdInInput = () => {
     )
 }
 
-export default UsingForInLabelAndIdInInput
+export default UsingForInLabelAndAriaLabelledByInInput
